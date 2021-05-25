@@ -22,6 +22,7 @@ def ai_ai_game():
     play_game(player_0, player_1)
 
 
+
 def play_game(player_0, player_1):
     game_state = GameState()
 
@@ -33,6 +34,8 @@ def play_game(player_0, player_1):
             game_state = player_1.move(game_state)
     game_state.show()
     game_state.show_winning_message()
+
+
 
 if __name__ == "__main__":
     ai_ai_game()

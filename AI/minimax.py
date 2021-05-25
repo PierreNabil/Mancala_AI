@@ -3,7 +3,6 @@ from .static_eval import static_eval
 pinf = float("inf")
 ninf = float("-inf")
 
-
 def minimax(state, depth):
     if depth <= 0 or state.is_terminal():
         return None, static_eval(state)
