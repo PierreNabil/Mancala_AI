@@ -51,6 +51,9 @@ def minimax_alpha_beta(state, depth, alpha=ninf, beta=pinf):
         return best_move, value
 
     else: # player 1: minimizer
+        value = pinf
+        best_move = None
+
         for move, child in state.children():
             _, child_value = minimax_alpha_beta(child, depth-1, alpha, beta)
             if child_value < value:

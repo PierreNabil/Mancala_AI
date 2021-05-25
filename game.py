@@ -31,7 +31,8 @@ def play_game(player_0, player_1):
             game_state = player_0.move(game_state)
         else:
             game_state = player_1.move(game_state)
+    game_state.show()
     game_state.show_winning_message()
 
 if __name__ == "__main__":
-    player_ai_game()
+    ai_ai_game()

@@ -1,5 +1,5 @@
 from .human_player import Player
-from ..minimax import minimax
+from ..minimax import minimax_alpha_beta
 
 MAX_DEPTH = 3
 
@@ -8,8 +8,8 @@ class AIPlayer(Player):
         self.player_id = player_id
 
     def move(self, state):
-        move, value = minimax(state, MAX_DEPTH)
-        
+        move, value = minimax_alpha_beta(state, MAX_DEPTH)
+
         print()
         print("Board Value:" , value)
 
