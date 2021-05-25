@@ -1,5 +1,5 @@
 from game import play_game
-from AI import HumanPlayer, AIPlayer, player
+from AI import HumanPlayer, AIPlayer
 
 def main():
     print("Welcome to Mancala AI!")
@@ -23,8 +23,9 @@ def main():
 
     print()
     print("Let's play!")
-
     play_game(player_0, player_1, stealing_mode)
+    # Press any button to stop the game
+    input()
 
 
 if __name__ == "__main__":
