@@ -30,7 +30,7 @@ class GameState:
     def children(self):
         for move in self.possible_moves():
             new_state = self.make_move(move)
-            yield new_state
+            yield move, new_state
 
     def possible_moves(self):
         if self.player_turn == 0:

@@ -1,4 +1,4 @@
-from .errors import InvalidMoveError
+from ..errors import InvalidMoveError
 
 class Player:
     pass
