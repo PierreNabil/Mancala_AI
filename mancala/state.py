@@ -3,12 +3,9 @@ from copy import deepcopy
 START_STATE = ([4]*6 + [0])*2
 
 class GameState:
-    def __init__(self, init_state=START_STATE):
-        if isinstance(init_state, GameState):
-            self = init_state
-        else:
-            self.state = init_state
-            self.player_turn = 0
+    def __init__(self, init_state=START_STATE, player_turn=0):
+        self.state = init_state
+        self.player_turn = player_turn
 
     def show(self):
         print()
@@ -17,6 +14,10 @@ class GameState:
         print("[{:2}]({:2})({:2})({:2})({:2})({:2})({:2})[  ]".format(*self.state[7:][::-1]))
         print("[  ]({:2})({:2})({:2})({:2})({:2})({:2})[{:2}]".format(*self.state[:7]))
         print("      0   1   2   3   4   5")
+
+    def show_winning_message(self):
+        winning_player = 0 if sum(self.state[0:6]) == 0 else 1
+        print(f"Player {winning_player} Won!")
 
     def is_terminal(self):
         player_0_win = sum(self.state[0:6]) == 0
@@ -43,7 +44,7 @@ class GameState:
             
     def make_move(self, move):
         # assumes that the move is valid
-        new_state = deep_copy(self.state)
+        new_state = deepcopy(self.state)
         hand = new_state[move]
         new_state[move] = 0
 
