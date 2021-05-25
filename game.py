@@ -1,24 +1,26 @@
 from mancala import GameState
 from AI import HumanPlayer, AIPlayer
 
+default_ai_dificulty = 5
+
 def player_player_game():
     player_0 = HumanPlayer(0)
     player_1 = HumanPlayer(1)
     play_game(player_0, player_1)
 
-def player_ai_game():
+def player_ai_game(ai_difficulty):
     player_0 = HumanPlayer(0)
-    player_1 = AIPlayer(1)
+    player_1 = AIPlayer(1, ai_difficulty)
     play_game(player_0, player_1)
 
-def ai_player_game():
-    player_0 = AIPlayer(0)
+def ai_player_game(ai_difficulty):
+    player_0 = AIPlayer(0, ai_difficulty)
     player_1 = HumanPlayer(1)
     play_game(player_0, player_1)
 
-def ai_ai_game():
-    player_0 = AIPlayer(0)
-    player_1 = AIPlayer(1)
+def ai_ai_game(ai0_difficulty, ai1_difficulty):
+    player_0 = AIPlayer(0, ai0_difficulty)
+    player_1 = AIPlayer(1, ai1_difficulty)
     play_game(player_0, player_1)
 
 
@@ -38,4 +40,4 @@ def play_game(player_0, player_1):
 
 
 if __name__ == "__main__":
-    ai_ai_game()
+    ai_ai_game(default_ai_dificulty, default_ai_dificulty)
