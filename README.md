@@ -39,6 +39,8 @@ IF the AI is too hard for you you can always select a lower difficulty and vice 
 
 Repeat for the other player (player1).
 
+Finally, you can select whether you want stealing mode on or off.
+
 
 You'll find can also use one of the functions given in [game.py](/game.py) to skip the UI part of the project.
 
@@ -67,6 +69,9 @@ The Winner of the game is then declared and the game ends.
 
 - An intuitive user interface for ease of use.
 - A binary executable to run on any device without the need to be able to run python code.
-- S DFS implementation of minimax and minimax with alpha-beta pruning that can be easilly used for other games.
+- A DFS implementation of minimax and minimax with alpha-beta pruning that can be easilly used for other games.
+- 2 Game Modes
+  - With Stealing
+  - Without Stealing
 - Support of various difficulty levels corresponding to different game tree deapths. (bonus feature #2)
 - Support a networking mode where 2 instances of an AI player can play the game against each other without any human intervention. (bonus feature #5)

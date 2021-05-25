@@ -24,7 +24,7 @@ def main():
     print()
     print("Let's play!")
     play_game(player_0, player_1, stealing_mode)
-    # Press any button to stop the game
+    # Press Enter to stop the game
     input()
 
 
