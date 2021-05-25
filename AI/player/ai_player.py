@@ -12,7 +12,7 @@ class AIPlayer(Player):
         printed_move = move-7 if self.player_id==1 else move
 
         print()
-        print(f"Board Value: {value}. Move: {move}")
+        print(f"Board Value: {value}. Move: {printed_move}")
 
         new_state = state.make_move(move)
         return new_state

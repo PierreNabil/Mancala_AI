@@ -1,7 +1,7 @@
 from mancala import GameState
 from AI import HumanPlayer, AIPlayer
 
-default_ai_dificulty = 5
+default_ai_dificulty = 6
 
 def player_player_game():
     player_0 = HumanPlayer(0)
@@ -25,8 +25,8 @@ def ai_ai_game(ai0_difficulty, ai1_difficulty):
 
 
 
-def play_game(player_0, player_1):
-    game_state = GameState()
+def play_game(player_0, player_1, stealing_mode=True):
+    game_state = GameState(stealing=stealing_mode)
 
     while not game_state.is_terminal():
         game_state.show()
@@ -40,4 +40,5 @@ def play_game(player_0, player_1):
 
 
 if __name__ == "__main__":
+    # player_player_game()
     ai_ai_game(default_ai_dificulty, default_ai_dificulty)

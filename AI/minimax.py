@@ -30,7 +30,6 @@ def minimax(state, depth):
         return best_move, value
 
 
-
 def minimax_alpha_beta(state, depth, alpha=ninf, beta=pinf):
     if depth == 0 or state.is_terminal():
         return None, static_eval(state)

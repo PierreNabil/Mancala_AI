@@ -53,7 +53,7 @@ class GameState:
             
     def make_move(self, move):
         # assumes that the move is valid
-        player0_turn = move in PocketName.p0_pockets
+        player0_turn = self.player_turn == 0
 
         new_state = deepcopy(self.state)
         hand = new_state[move]
@@ -69,8 +69,8 @@ class GameState:
 
         if self.stealing:
             if (player0_turn and move in PocketName.p0_pockets) or (not player0_turn and move in PocketName.p1_pockets):
-                if new_state[move] == 0:
-                    # steal marbles from opposite pocket if your pocket is empty
+                if new_state[move] == 1:
+                    # steal marbles from opposite pocket if your pocket was empty
                     opposite_move = 12 - move
                     hand = new_state[move] + new_state[opposite_move]
                     new_state[move], new_state[opposite_move] = 0, 0
@@ -78,7 +78,7 @@ class GameState:
                     if player0_turn: new_state[PocketName.p0_mancala] += hand
                     else: new_state[PocketName.p1_mancala] += hand
 
-        if (player0_turn and move == 6) or (not player0_turn and move == 13):
+        if (player0_turn and move == PocketName.p0_mancala) or (not player0_turn and move == PocketName.p1_mancala):
             # play again if last peice is put in your own mancala
             next_player = self.player_turn
         else:
@@ -101,3 +101,8 @@ class GameState:
         new_game_state = GameState(new_state, next_player, self.stealing)
         new_game_state.winner = winner
         return new_game_state
+
+
+if __name__ == "__main__":
+    game_state = GameState()
+    game_state.show()
