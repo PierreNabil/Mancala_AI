@@ -16,7 +16,7 @@ def main():
         p1_diff = int(input("Dificulty level: "))
 
     print()
-    stealing_mode = input("Do you want stealing mode on? (y/n) ").lower()
+    stealing_mode = input("Do you want stealing mode on? (y/n) ").strip().lower() == 'y'
 
     player_0 = HumanPlayer(0) if p0 != 'a' else AIPlayer(0, p0_diff)
     player_1 = HumanPlayer(1) if p1 != 'a' else AIPlayer(1, p1_diff)
