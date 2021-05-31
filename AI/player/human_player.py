@@ -15,9 +15,6 @@ class HumanPlayer(Player):
 
             if self.player_id == 1:
                 move = move + 7
-        
-        # if move not in state.possible_moves():
-        #     raise InvalidMoveError(move, state)
 
         new_state = state.make_move(move)
         return new_state

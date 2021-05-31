@@ -28,7 +28,7 @@ where the depth of the tree search is given by this formula:
 
 ## Usage
 
-Here's a YouTube [video](...) that shows our game in action!
+Here's a YouTube [video](https://www.youtube.com/watch?v=9p3riPJWUNw) that shows our game in action!
 
 The simplest way to use Mancala AI is to run the [binary executable](/dist/mancala/mancala.exe) in `/dist/mancala/mancala.exe`.
 

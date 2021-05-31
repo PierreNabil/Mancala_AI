@@ -105,4 +105,5 @@ class GameState:
 
 if __name__ == "__main__":
     game_state = GameState()
+    print(game_state.state)
     game_state.show()
