@@ -63,7 +63,7 @@ The Winner of the game is then declared and the game ends.
 - [Pierre Nabil](https://github.com/PierreNabil)
 - [Michael Magdy](https://github.com/Michael-M-Mike)
 - [Christine Magdy](https://github.com/ChristineMagdy99)
-- [John Mahaa](https://github.com/John-Bahaa)
+- [John Bahaa](https://github.com/John-Bahaa)
 - [Adham Nour]()
 
 
