@@ -1,5 +1,7 @@
-# 4th_CSE_AI_Project
+# Mancala_AI
 An AI to play the game Mancala designed from scratch.
+
+4th year 2nd term AI Project.
 
 ## Contents
 
